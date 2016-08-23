@@ -59,6 +59,6 @@ createdb v9dev /dev/null
 print_out "End of installation"
 
 echo "Login into the VM 'vagrant ssh'"
-echo "To start odoo type '~/odoo-dev/odoo/odoo.py -d v9dev '"
+echo "To start odoo type '~/odoo-dev/odoo/odoo.py -d v9dev'"
 echo "Open your browser and go to http://localhost:8069 (admin:admin)"
 echo "Enjoy it !"
