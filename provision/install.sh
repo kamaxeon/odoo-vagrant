@@ -54,7 +54,7 @@ print_out "Create dbuser (vagrant)"
 sudo su - postgres -c "createuser -s $(whoami)" > /dev/null
 
 print_out "Create db (v9dev)"
-createdb v9dev /dev/null
+createdb v9dev > /dev/null
 
 print_out "End of installation"
 
