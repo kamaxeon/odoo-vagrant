@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "2048"
   end
-  config.vm.provision "shell", path: "deploy/before.sh", privileged: false
+  config.vm.provision "shell", path: "provision/before.sh", privileged: false
   config.vm.provision :reload
-  config.vm.provision "shell", path: "deploy/install.sh", privileged: false
+  config.vm.provision "shell", path: "provision/install.sh", privileged: false
 end
