@@ -11,24 +11,24 @@ Dependencies
 Setup
 -----
 
-1. Download and install Virtual Box
+* Download and install Virtual Box
 
-2. Download and install Vagrant
+* Download and install Vagrant
 
-3. Clone this repo
+* Clone this repo
 
 ```
 git clone http://github.com/kamaxeon/odoo-vagrant.git
 ```
 
-4. Start virtual machine
+* Start virtual machine
 
 ```
 cd odoo-vagrant
 vagrant up
 ```
 
-5. Login in the virtual machine, and start odoo
+* Login in the virtual machine, and start odoo
 
 
 ```
@@ -36,7 +36,7 @@ vagrant ssh
 ~/odoo-dev/odoo/odoo.py -d v9dev
 ```
 
-6. Open your browser and go http://localhost:8069 (admin:admin)
+* Open your browser and go http://localhost:8069 (admin:admin)
 
 Shared folders
 --------------
