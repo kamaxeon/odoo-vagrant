@@ -43,6 +43,10 @@ Shared folders
 src/my_addons is mapped to /home/vagrant/my_addons, you can write your modules in this directory
 
 
+pgAdmin 
+-------
+If you want manage the postgresql server from your desktop, you only have to connect to localhost, username and password is 'admin'
+
 Contributing
 ------------
 

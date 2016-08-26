@@ -59,6 +59,14 @@ sudo su - postgres -c "createuser -s $(whoami)" > /dev/null
 print_out "Create db (v9dev)"
 createdb v9dev > /dev/null
 
+print_out "Create user for pgadmin (admin:admin)"
+sudo su - postgres -c "createuser -s admin" > /dev/null
+sudo -u postgres psql -c "ALTER USER admin WITH PASSWORD 'admin';" > /dev/null
+
+print_out "Configure postgresql to listen in all interfaces"
+sudo sed -i "s/^#listen_addresses.*/listen_addresses = '*'/" /etc/postgresql/9.5/main/postgresql.conf 
+sudo sh -c 'echo "host  all   all   all     password" >> /etc/postgresql/9.5/main/pg_hba.conf'
+sudo service postgresql restart
 print_out "End of installation"
 
 echo "Login into the VM 'vagrant ssh'"
