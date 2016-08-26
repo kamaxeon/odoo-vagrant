@@ -53,6 +53,9 @@ print_out "Install pip dependencies for odoo (it may take a log time)"
 sudo -H pip install --upgrade pip > /dev/null
 sudo -H pip install -r ~/odoo-dev/odoo/requirements.txt > /dev/null
 
+print_out "Install lint tool for odoo"
+sudo -H pip install --upgrade --pre pylint-odoo > /dev/null
+
 print_out "Create dbuser (vagrant)"
 sudo su - postgres -c "createuser -s $(whoami)" > /dev/null
 
